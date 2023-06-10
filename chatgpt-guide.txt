@@ -1,0 +1,21 @@
+- index.html
+- about.html
+- resume.pdf
+- projects.html
+- dsa.html
+- courses.html
+- guides.html
+
+
+- dsa/
+  - problem1/
+    - problem1.html
+    - problem1.png
+    - problem1.txt
+    - solution1.cpp
+  - problem2/
+    - problem2.html
+    - problem2.png
+    - problem2.txt
+    - solution2.cpp
+  - ...

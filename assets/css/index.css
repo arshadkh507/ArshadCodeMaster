@@ -1,0 +1,47 @@
+/* Default styles */
+.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar li:last-child {
+  margin-right: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+/* Responsive styles */
+
+/* Tablet */
+@media screen and (max-width: 1023px) {
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar li {
+    margin: 10px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar li {
+    margin: 10px 0;
+  }
+}
