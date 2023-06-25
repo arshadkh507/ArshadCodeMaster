@@ -11,35 +11,129 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- just for theme not yet implemented -->
+    <!-- <link rel="stylesheet" href="styles-light.css" id="theme-link" />
+    <script>
+      function toggleTheme() {
+        var themeLink = document.getElementById("theme-link");
+        if (themeLink.href.endsWith("styles-light.css")) {
+          themeLink.href = "styles-dark.css";
+        } else {
+          themeLink.href = "styles-light.css";
+        }
+      }
+    </script> -->
   </head>
 
   <body>
-    <header>
-      <nav>
-        <ul class="navbar">
-          <li><a href="about/about.html">About</a></li>
-          <li><a href="resume/resume.pdf">Resume</a></li>
-          <li><a href="projects/projects.html">Projects</a></li>
-          <li><a href="dsa/dsa.html">DSA</a></li>
-          <li><a href="courses/courses.html">Courses</a></li>
-          <li><a href="guides/guides.html">Guides</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="home-container">
+      <!-- ==========================================================
+Sidebar
+==========================================================  -->
+      <div class="sidebar">
+        <div class="sidebar_inner">
+          <ul>
+            <li class="active">
+              <a href="#">
+                <span class="icon"><i class="fas fa-home"></i></span>
+                <span class="text">Home</span>
+              </a>
+            </li>
 
-    <main>
-      <!-- Your main content goes here -->
-    </main>
+            <li>
+              <a href="#">
+                <span class="icon"><i class="fas fa-info-circle"></i></span>
+                <span class="text">About</span>
+              </a>
+            </li>
 
-    <footer>
-      <!-- Your footer content goes here -->
-    </footer>
+            <li>
+              <a href="#">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+                <span class="text">Contact</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class="icon"><i class="fas fa-briefcase"></i></span>
+                <span class="text">Portfolio</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class="icon"><i class="far fa-file-alt"></i></span>
+                <span class="text">Resume</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class="icon"><i class="fas fa-code"></i></span>
+                <span class="text">DSA</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" id="theme-toggle">
+                <span class="icon"><i class="fas fa-adjust"></i></span>
+                <span id="text">Theme</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ==========================================================
+Main Container/ Content Home Page
+==========================================================  -->
+
+      <div class="main_container">
+        <div class="content">
+          <h1>Arshad Khan</h1>
+
+          <h2>
+            I am a passionate
+            <span>Frontend Web Developer, Reactjs Developer</span>
+            From Pakistan.
+          </h2>
+          <div class="buttons">
+            <a href="#" class="hire-btn">Hire Me</a>
+            <a href="https://wa.me/+923489618958" class="whatsapp-btn"
+              >WhatsApp</a
+            >
+          </div>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <button class="sidebar-toggle" type="button">
+        <span class="bars-icon"></span>
+      </button>
+    </div>
+
+    <!-- index.js file -->
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>

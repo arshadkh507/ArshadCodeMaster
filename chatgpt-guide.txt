@@ -19,3 +19,33 @@
     - problem2.txt
     - solution2.cpp
   - ...
+
+
+
+Midnight-Blue
+#41729 F
+Blue_Gray
+#5885AF
+Dark Blue
+#274472
+Baby Blue
+#C3EOE5s
+
+Baby Blue
+#68BBE3
+Blue Grotto
+#OE86D4
+Blue
+#055C9D
+Navy Blue
+#003060
+
+
+003060
+000f1f
+002852
+004f9f
+0069d2
+0069d2
+003060
+34b7f1
