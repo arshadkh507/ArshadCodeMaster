@@ -1,7 +1,6 @@
 // Declare body at the top of your script
 const body = document.querySelector("body");
 
-
 /*
 ==========================================================
  Burger Menu | Sidebar Toggling
@@ -27,103 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-
-
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   const burgerMenu = document.getElementById("burger-menu");
-//   const menuToggle = document.getElementById("menu-toggle");
-//   const navList = document.querySelector(".navbar ul");
-//   const burgerIcon = document.getElementById("burger-icon");
-
-//   burgerMenu.addEventListener("click", function() {
-//     if (menuToggle.checked) {
-//       navList.style.right = "0"; // Slide in from the right
-//       burgerIcon.classList.add("open");
-//     } else {
-//       navList.style.right = "-300px"; // Slide out to the right
-//       burgerIcon.classList.remove("open");
-//     }
-//   });
-// });
-
-
-
-
-
-
-/*
-==========================================================
- Sidebar Toggling
-==========================================================*/
-// toggle active class on sidebar-toggle button
-// const toggleButton = document.querySelector(".sidebar-toggle");
-// const sidebar = document.querySelector(".sidebar");
-
-// toggleButton.addEventListener("click", () => {
-//   toggleButton.classList.toggle("active");
-// });
-
-// // toggle sidebar on sidebar-toggle button
-// toggleButton.addEventListener("click", function () {
-//   sidebar.classList.toggle("open");
-// });
-
-
-/*
-==========================================================
- Sidebar Closing 
-==========================================================*/
-// const sidebarLinks = document.querySelectorAll(".sidebar a");
-
-
-// body.addEventListener("click", (event) => {
-//   if (!sidebar.contains(event.target) && !toggleButton.contains(event.target) && window.innerWidth <= 992) {
-//     sidebar.classList.remove("open");
-//     toggleButton.classList.remove("active");
-//   }
-// });
-
-// sidebarLinks.forEach((link) => {
-//   link.addEventListener("click", () => {
-//     if (window.innerWidth <= 992) {
-//       sidebar.classList.toggle("open");
-//     }
-//   });
-// });
-
-/*
-==========================================================
- Theme Toggling
-==========================================================*/
-
-// get the theme toggle element
-// const themeToggle = document.getElementById("theme-toggle");
-// const themeText = document.getElementById("text");
-
-// // add a click event listener to the theme toggle element
-// themeToggle.addEventListener("click", () => {
-//   // toggle the 'bg-dark' and 'bg-white' classes on the body element
-//   body.classList.toggle("bg-dark");
-//   body.classList.toggle("bg-white");
-
-//   // toggle the icon between sun and moon
-//   const icon = themeToggle.querySelector(".icon i");
-//   icon.classList.toggle("fa-sun");
-//   icon.classList.toggle("fa-moon");
-
-//   // toggle the text between 'Theme', 'Dark', and 'Light'
-//   const currentText = themeText.textContent;
-//   if (currentText === "Theme") {
-//     themeText.textContent = "Dark";
-//   } else if (currentText === "Dark") {
-//     themeText.textContent = "Light";
-//   } else {
-//     themeText.textContent = "Theme";
-//   }
-// });
 
 /*
 ==========================================================
@@ -166,3 +68,23 @@ document.addEventListener('DOMContentLoaded', function () {
       contactForm.reset();
   });
 });
+
+
+/*
+==========================================================
+ About Tabs opening and closing
+==========================================================*/
+const tabs = document.querySelectorAll('.about-tabs li');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      // Remove the 'active' class from all tabs and tab contents
+      tabs.forEach((tab) => tab.classList.remove('active'));
+      tabContents.forEach((content) => content.classList.remove('active'));
+
+      // Add the 'active' class to the clicked tab and corresponding tab content
+      tab.classList.add('active');
+      tabContents[index].classList.add('active');
+    });
+  });
