@@ -67,6 +67,11 @@ body {
   padding: 0;
 }
 
+/* For removing horizental scroll of toggle right side menu */
+body {
+  overflow-x: hidden;
+}
+
 main {
   width: 100%;
   max-width: 1440px;
@@ -97,6 +102,21 @@ ul {
   -webkit-backdrop-filter: blur(12.4px);
   border: 1px solid rgba(255, 255, 255, 0.49);
   padding: 30px;
+}
+
+@media screen and (max-width:768px) {
+  .section-container {
+    border-radius: 14px;
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .section-container {
+    border-radius: 0px;
+    padding: 10px;
+    border: none;
+  }
 }
 
 /* ==========================================================
@@ -175,6 +195,11 @@ li.active a {
   color: var(--primary-color-2);
 }
 
+/* Add this for hiding horizontal scroll when the menu is closed */
+/* body.menu-closed {
+  overflow-x: hidden;
+} */
+
 @media screen and (max-width: 992px) {
   #logo span {
     font-size: 30px;
@@ -196,7 +221,6 @@ li.active a {
   z-index: 10;
 }
 
-
 #burger-menu span i {
   color: #e5e2e2;
   font-size: 30px;
@@ -212,12 +236,11 @@ li.active a {
     display: flex;
   }
 
-
   .navbar ul {
     display: block;
     position: absolute;
     top: 0;
-    right: -300px; 
+    right: -300px;
     padding-top: 50px;
     background: #3e1e68;
     flex-direction: column;
@@ -259,7 +282,6 @@ li.active a {
     display: flex;
     overflow: hidden;
   }
-
 
   .navbar a {
     padding: 10px 20px;
@@ -339,7 +361,7 @@ li.active a {
   display: inline-block;
   padding: 10px 20px;
   margin-right: 10px;
-  background-color: #e45a84; 
+  background-color: #e45a84;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -347,7 +369,7 @@ li.active a {
 }
 
 .hero-buttons .btn:hover {
-  background-color: #ff3366; 
+  background-color: #ff3366;
 }
 
 .hero-social-icons {
@@ -363,16 +385,15 @@ li.active a {
 }
 
 .hero-social-icons .social-icon:hover {
-  color: #ff3366; 
+  color: #ff3366;
 }
 
 .hero-image img {
   width: 100%;
-  border-radius: 50%; 
-  border: 5px solid #e45a84; 
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+  border-radius: 50%;
+  border: 5px solid #e45a84;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
-
 
 /* Media Query for Responsiveness */
 
@@ -382,11 +403,11 @@ li.active a {
   }
 
   .hero-title {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
   }
 
   .job-title {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
   .hero-subtitle {
     font-size: 1.5rem;
@@ -395,13 +416,11 @@ li.active a {
   .hero-image img {
     width: 90%;
     margin: 0 auto;
-    border-radius: 50%; 
-    border: 5px solid #e45a84; 
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+    border-radius: 50%;
+    border: 5px solid #e45a84;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   }
-  
 }
-
 
 @media (max-width: 768px) {
   .hero {
@@ -414,26 +433,32 @@ li.active a {
     width: 100%;
     max-width: 100%;
     text-align: center;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
 
   .hero-title {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
 
   .job-title {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 
   .hero-buttons .btn {
-    margin-right: 0; 
+    margin-right: 0;
   }
 }
 
 
+@media screen and (max-width:550px) {
+  .hero .section-container  {
+    display: block;
+  }
 
-
-
+  .hero-image img {
+    width: 70%;
+  }
+}
 
 
 
@@ -531,7 +556,9 @@ li.active a {
   font-family: var(--ff-raleway);
 }
 
-.about-tab p, .experience-paragraph , .education-tab p {
+.about-tab p,
+.experience-paragraph,
+.education-tab p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 15px;
@@ -540,7 +567,6 @@ li.active a {
   font-style: italic;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
-
 
 .tab-content {
   display: none;
@@ -585,13 +611,16 @@ li.active a {
 }
 
 /* Skills Tab */
-.skills-list , .experience-list, .education-list{
+.skills-list,
+.experience-list,
+.education-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.skills-subheading , .education-tab h4 {
+.skills-subheading,
+.education-tab h4 {
   font-size: 1.3rem;
   color: #e7e7e7;
   margin-bottom: 10px;
@@ -605,7 +634,8 @@ li.active a {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.skills-list li , .education-list li{
+.skills-list li,
+.education-list li {
   font-size: 1.1rem;
   color: #fff;
   line-height: 1.6;
@@ -619,7 +649,6 @@ li.active a {
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
-
 .skills-list li:hover {
   background-color: #171515;
   color: #fff;
@@ -631,13 +660,12 @@ li.active a {
   color: #e7e7e7;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  background-color: #1976D2; 
-  padding: 10px 15px; 
-  border-radius: 5px; 
+  background-color: #1976d2;
+  padding: 10px 15px;
+  border-radius: 5px;
   display: inline-block;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
 
 /* Experience Tab */
 .experience-icon {
@@ -665,20 +693,17 @@ li.active a {
   text-decoration: underline;
 }
 
-
 /* Education Tab */
 .tab-content p b {
   font-weight: bold;
-  color: #F1502F; /* Highlight GPA in a distinctive color */
+  color: #f1502f; /* Highlight GPA in a distinctive color */
 }
 
 .education-list li:last-child {
   margin: 5px 0;
   font-weight: bold;
-  color: #61DAFB; 
+  color: #61dafb;
 }
-
-
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
@@ -706,35 +731,34 @@ li.active a {
 
   .about-tabs ul {
     margin-top: 20px;
-   justify-content: center;
-  } 
+    justify-content: center;
+  }
 
   .about-tabs li {
     padding: 10px;
     text-align: center;
     margin-bottom: 10px;
   }
-
 }
-
-
 
 /* Media query for smaller screens */
 @media (max-width: 430px) {
-
-  /* .about-tabs ul {
+  .about-tabs ul {
     flex-direction: column;
-  } */
+    margin-top: 20px;
+    justify-content: center;
+  }
 
   .about-tabs li {
     padding: 10px;
     text-align: center;
     margin-bottom: 10px;
   }
-
+  .education-list li {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
 }
-
-
 
 /* ==========================================================
                       Portfolio Section
@@ -762,17 +786,16 @@ li.active a {
 }
 
 .portfolio p a.profolio-see-all {
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
-  transition: color 0.3s ease; 
+  transition: color 0.3s ease;
 }
 
 .portfolio p a.profolio-see-all:hover {
-  color: #0056b3; 
+  color: #0056b3;
   transition: color 0.3s ease;
-  text-decoration: underline; 
+  text-decoration: underline;
 }
-
 
 .portfolio-items {
   display: flex;
@@ -796,7 +819,7 @@ li.active a {
 }
 
 .portfolio-item::before {
-  content: '';
+  content: "";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -821,15 +844,15 @@ li.active a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.10);
+  background: rgba(0, 0, 0, 0.1);
   color: #fff;
   transition: all 0.3s;
   z-index: 1;
   opacity: 0;
   transition: opacity 0.2s;
   display: flex;
-  flex-direction: column; 
-  justify-content: center; 
+  flex-direction: column;
+  justify-content: center;
 }
 
 .portfolio-item:hover .project-details {
@@ -849,7 +872,7 @@ li.active a {
 
 .project-details p {
   font-size: 1rem;
-  margin: 10px 0; 
+  margin: 10px 0;
 }
 
 .project-links a {
@@ -858,20 +881,19 @@ li.active a {
   margin-right: 10px;
 }
 .project-links a:hover {
-  color: #007BFF;
+  color: #007bff;
 }
 
 .portfolio-item:hover .project-details {
   display: block;
 }
 
-
 /* Media Query for Responsiveness (adjust as needed) */
 @media (max-width: 800px) {
   .portfolio {
     margin: 10px auto;
   }
-  
+
   .portfolio-items {
     display: flex;
     flex-direction: column;
@@ -883,15 +905,13 @@ li.active a {
   }
 }
 
-
-
 /* ==========================================================
                       Contact Section
    ========================================================== */
 
 .contact {
-  color: #fff; 
-  padding: 20px 0; 
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -909,7 +929,6 @@ li.active a {
   font-size: 1.2rem;
 }
 
-
 .contact-details {
   display: flex;
   justify-content: center;
@@ -918,7 +937,6 @@ li.active a {
   margin: 30px 0;
   flex-wrap: wrap;
 }
-
 
 .contact-item {
   margin: 0 0px;
@@ -931,15 +949,13 @@ li.active a {
   align-items: center;
 }
 
-
 .contact-item:hover {
-  background:white;
-} 
-
+  background: white;
+}
 
 .contact-item i {
   font-size: 1.8rem;
-  color: #007BFF; 
+  color: #007bff;
   margin-right: 10px;
 }
 
@@ -955,17 +971,16 @@ li.active a {
 
 .contact-item a {
   text-decoration: none;
-  color: #007BFF;
+  color: #007bff;
   transition: color 0.3s ease;
 }
 .contact-item:hover {
   background: white;
-  color: #000; 
+  color: #000;
 }
 
-
-.contact-item:hover  p {
-  color: #000; 
+.contact-item:hover p {
+  color: #000;
 }
 
 .contact-form {
@@ -1027,15 +1042,21 @@ li.active a {
   background-color: #e45a84;
 }
 
-
-@media screen and (max-width:650px){
+@media screen and (max-width: 650px) {
   .contact-details {
     display: block;
   }
   .contact-item {
     margin: 5px auto;
   }
-} 
+}
+
+@media screen and (max-width: 650px) {
+  .contact-form {
+    padding: 20px 10px;
+  }
+}
+
 
 
 
@@ -1048,7 +1069,7 @@ footer {
   background-color: #e45a84;
   color: #fff;
   text-align: center;
-  padding: 30px 0;
+  padding: 30px 10px;
   position: relative;
 }
 
@@ -1106,6 +1127,24 @@ footer {
 
 .footer-right p:hover {
   opacity: 0.8;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .social-icons {
+    margin: 20px 0;
+  }
 }
 
 /* ==========================================================

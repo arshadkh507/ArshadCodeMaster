@@ -17,13 +17,18 @@ document.addEventListener("DOMContentLoaded", function() {
       navList.style.right = "-300px"; // Slide out to the right
       burgerIcon.querySelector("i").classList.remove("fa-xmark");
       burgerIcon.querySelector("i").classList.add("fa-bars");
+      // Add class to hide horizontal scroll
+      // document.body.classList.add("menu-closed");
     } else {
       navList.style.right = "0"; // Slide in from the right
       burgerIcon.querySelector("i").classList.remove("fa-bars");
       burgerIcon.querySelector("i").classList.add("fa-xmark");
+      // Remove class to show horizontal scroll
+      // document.body.classList.remove("menu-closed");
     }
   });
 });
+
 
 
 
