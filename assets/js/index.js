@@ -23,13 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
       navList.style.right = "0"; // Slide in from the right
       burgerIcon.querySelector("i").classList.remove("fa-bars");
       burgerIcon.querySelector("i").classList.add("fa-xmark");
-      // Remove class to show horizontal scroll
-      // document.body.classList.remove("menu-closed");
     }
   });
 });
-
-
 
 
 /*
@@ -37,16 +33,16 @@ document.addEventListener("DOMContentLoaded", function() {
  Active li on clicking
 ==========================================================*/
 
-const listItem = document.querySelectorAll(".sidebar_inner li");
+// const listItem = document.querySelectorAll("#header .navbar li");
 
-listItem.forEach((li) => {
-  li.addEventListener("click", () => {
-    listItem.forEach((li) => {
-      li.classList.remove("active");
-    });
-    li.classList.add("active");
-  });
-});
+// listItem.forEach((li) => {
+//   li.addEventListener("click", () => {
+//     listItem.forEach((li) => {
+//       li.classList.remove("active");
+//     });
+//     li.classList.add("active");
+//   });
+// });
 
 /*======== JavaScript for smooth scroll effect =================*/
 

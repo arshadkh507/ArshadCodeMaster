@@ -14,6 +14,9 @@
   margin: 0 auto;
 }
 
+
+
+
 .resume-title {
   text-align: center;
 }
@@ -36,6 +39,28 @@
   letter-spacing: 1px;
   font-family: var(--ff-raleway);
 }
+
+/* Resume Download */
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #007BFF;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+.download-button:hover {
+  color: #fff;
+  background-color: #007BFF;
+  border-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+
 
 /* Section Styles */
 .resume section {
@@ -214,10 +239,15 @@ ul li {
   color: #fff;
 }
 
+
 .skills ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .skills li {
