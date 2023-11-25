@@ -14,9 +14,6 @@
   margin: 0 auto;
 }
 
-
-
-
 .resume-title {
   text-align: center;
 }
@@ -75,9 +72,9 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   background: linear-gradient(
     90deg,
-    #e45a84,
+    #e32a62,
     #583c87
-  ); /* Gradient background with your palette colors */
+   ); /* e45a84 */
 }
 
 /* Responsive styles */
@@ -96,7 +93,8 @@
 .resume section h2 {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #e45a84;
+  /* color: #e45a84; */
+  color: white;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -214,8 +212,11 @@ ul li {
 .education-item h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #e45a84; /* Title color */
+  /* color: #e45a84;  */
+  color: #ffc107;
+  margin-bottom: 5px;
 }
+
 
 .education-item p {
   font-size: 1rem;
@@ -269,7 +270,8 @@ ul li {
 .skills h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #e45a84;
+  /* color: #e45a84; */
+  color: #ffc107;
   margin-top: 20px;
 }
 
@@ -297,12 +299,13 @@ ul li {
 .project-item p {
   font-size: 1rem;
   color: #fff;
+  margin-top: 15px;
 }
 
 /* Optional: Add a hover effect for the project items */
-.project-item:hover {
-  background: rgba(255, 255, 255, 0.1); /* Light background on hover */
-}
+/* .project-item:hover {
+  background: rgba(255, 255, 255, 0.1); 
+} */
 
 /* Education Section Styles */
 .education {
@@ -329,12 +332,7 @@ ul li {
   position: relative;
 }
 
-.education-item h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #e45a84; /* Title color */
-  margin-bottom: 5px;
-}
+
 
 .education-item p {
   font-size: 1rem;
@@ -378,6 +376,39 @@ ul li {
 .education-item:hover {
   background: rgba(255, 255, 255, 0.1); /* Light background on hover */
 }
+
+
+
+/* Poject links */
+.resume-project-links {
+  display: flex;
+ gap: 10px;
+ margin-top: 15px;
+}
+
+.resume-project-links a {
+  text-decoration: none;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s, background-color 0.3s; /* Add background-color transition */
+  padding: 8px 15px;
+  border: 2px solid #007bff; /* Add border for button-like appearance */
+  border-radius: 5px;
+}
+
+.resume-project-links a:hover {
+  color: #0056b3;
+  background-color: #e6f7ff; /* Change background color on hover */
+  border-color: #0056b3; /* Change border color on hover */
+}
+
+.resume-project-links i {
+  margin-right: 5px;
+}
+
+
+
 
 /* ==========================================================
                       Hero Section
